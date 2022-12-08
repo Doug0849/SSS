@@ -310,7 +310,6 @@ export default function Multistep() {
   const [progress, setProgress] = useState(33.33);
   const toast = useToast();
   return (
-    <NoSSRWrapper>
       <Box
         borderWidth="1px"
         rounded="lg"
@@ -384,6 +383,5 @@ export default function Multistep() {
           </Flex>
         </ButtonGroup>
       </Box>
-    </NoSSRWrapper>
   );
 }

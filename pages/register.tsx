@@ -21,7 +21,7 @@ import {
 
 import { useToast } from "@chakra-ui/react";
 import Link from "next/link";
-import  NoSSRWrapper  from "../components/NoSSRWrapper";
+import NoSSRWrapper from "../components/NoSSRWrapper";
 
 const Form1 = () => {
   const [show, setShow] = React.useState(false);
@@ -51,7 +51,7 @@ const Form1 = () => {
           Email address
         </FormLabel>
         <Input id="email" type="email" />
-        <FormHelperText>{"We'll never share your email."}</FormHelperText>
+        <FormHelperText>We will never share your email.</FormHelperText>
       </FormControl>
 
       <FormControl>

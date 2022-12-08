@@ -21,6 +21,7 @@ import {
 
 import { useToast } from "@chakra-ui/react";
 import Link from "next/link";
+import  NoSSRWrapper  from "../components/NoSSRWrapper";
 
 const Form1 = () => {
   const [show, setShow] = React.useState(false);
@@ -304,12 +305,12 @@ const Form3 = () => {
   );
 };
 
-export default function multistep() {
-  const [step, setStep] = useState<number>(1);
+export default function Multistep() {
+  const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
   const toast = useToast();
   return (
-    <>
+    <NoSSRWrapper>
       <Box
         borderWidth="1px"
         rounded="lg"
@@ -383,6 +384,6 @@ export default function multistep() {
           </Flex>
         </ButtonGroup>
       </Box>
-    </>
+    </NoSSRWrapper>
   );
 }

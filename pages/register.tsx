@@ -51,7 +51,7 @@ const Form1 = () => {
           Email address
         </FormLabel>
         <Input id="email" type="email" />
-        <FormHelperText>We will never share your email.</FormHelperText>
+        <FormHelperText>We&apos; never share your email.</FormHelperText>
       </FormControl>
 
       <FormControl>
@@ -370,7 +370,7 @@ export default function Multistep() {
                   onClick={() => {
                     toast({
                       title: "Account created.",
-                      description: "We've created your account for you.",
+                      description: "We&apos;ve created your account for you.",
                       status: "success",
                       duration: 3000,
                       isClosable: true,

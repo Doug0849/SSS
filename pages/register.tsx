@@ -305,9 +305,9 @@ const Form3 = () => {
 };
 
 export default function multistep() {
-  const toast = useToast();
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState<number>(1);
   const [progress, setProgress] = useState(33.33);
+  const toast = useToast();
   return (
     <>
       <Box

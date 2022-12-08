@@ -51,7 +51,7 @@ const Form1 = () => {
           Email address
         </FormLabel>
         <Input id="email" type="email" />
-        <FormHelperText>We'll never share your email.</FormHelperText>
+        <FormHelperText>{"We'll never share your email."}</FormHelperText>
       </FormControl>
 
       <FormControl>

@@ -3,9 +3,11 @@ import { useEffect } from "react";
 import { utils } from "ethers";
 import tokenContractAbi from "../../abis/myTokenAbi.json";
 import { tokenAddress } from "../../constants";
+import ethers from "ethers"
 
 const usePaidMint = (amount: number) => {
   const { address } = useAccount();
+  const paidETH = amount * 0.1
   const {
     writeAsync,
     status: paidMintStatus,
@@ -16,9 +18,9 @@ const usePaidMint = (amount: number) => {
     abi: tokenContractAbi,
     functionName: "paidMint",
     chainId: 5,
-    args: [address, utils.parseEther("1")],
+    args: [address, amount],
     overrides: {
-      value: utils.parseEther("0.1"),
+      value: utils.parseEther(paidETH.toString()),
     },
   });
 

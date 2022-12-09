@@ -6,7 +6,7 @@ import { tokenAddress, chatroomAddress } from "../../constants";
 
 const useFreeMint = (mintCount: number) => {
   const { address } = useAccount();
-  const { writeAsync, status, data } = useContractWrite({
+  const { writeAsync, status: freeMintStatus, data } = useContractWrite({
     mode: "recklesslyUnprepared",
     address: tokenAddress,
     abi: tokenContractAbi,
@@ -15,15 +15,9 @@ const useFreeMint = (mintCount: number) => {
     args: [address, utils.parseEther(mintCount.toString())],
   });
 
-  useEffect(() => {
-    if (mintCount) {
-      utils.parseEther(mintCount.toString());
-    }
-  }, [mintCount]);
-
   return {
     freeMint: writeAsync,
-    status,
+    freeMintStatus,
     data,
   };
 };

@@ -7,6 +7,8 @@ import {
   Button,
   Icon,
   IconProps,
+  Image,
+  Box,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import react from "react";
@@ -14,11 +16,9 @@ import PersonalCard from "../components/PersonalCard";
 
 const Expolore: NextPage = () => {
   return (
-    <>
-      <Container>
-        <Heading>Our Profile</Heading>
-      </Container>
-    </>
+    <Flex w="100%" justifyContent='center'>
+        <Image w="60%" src="/imgs/about.png" alt="About" />
+    </Flex>
   );
 };
 

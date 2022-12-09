@@ -7,16 +7,18 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import Head from "next/head";
+import SiderBar from "../components/SiderBar";
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
-    chain.mainnet,
+    chain.goerli,
+    // chain.mainnet,
     // chain.polygon,
     // chain.optimism,
     // chain.arbitrum,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
-      ? [chain.goerli]
-      : []),
+    // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
+    // ? [chain.goerli]
+    // : []),
   ],
   [
     alchemyProvider({

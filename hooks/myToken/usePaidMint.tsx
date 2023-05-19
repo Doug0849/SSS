@@ -7,7 +7,8 @@ import ethers from "ethers"
 
 const usePaidMint = (amount: number) => {
   const { address } = useAccount();
-  const paidETH = amount * 0.1
+  const mintAmont = utils.parseUnits(amount.toString(), 18);
+  const paidETH = amount * 0.1;
   const {
     writeAsync,
     status: paidMintStatus,
@@ -18,7 +19,7 @@ const usePaidMint = (amount: number) => {
     abi: tokenContractAbi,
     functionName: "paidMint",
     chainId: 5,
-    args: [address, amount],
+    args: [address, mintAmont],
     overrides: {
       value: utils.parseEther(paidETH.toString()),
     },

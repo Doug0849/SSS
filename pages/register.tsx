@@ -29,7 +29,7 @@ const Form1 = () => {
   return (
     <>
       <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
-        Register To Be A Perfessional
+        Register To Be A Professional
       </Heading>
       <Flex>
         <FormControl mr="5%">

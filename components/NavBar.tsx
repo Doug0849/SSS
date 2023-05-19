@@ -163,7 +163,7 @@ export default function withAction() {
             <NumberInput
               mt={2}
               mb={2}
-              onChange={(v: number) => setAmount(v)}
+              onChange={(v: string) => setAmount(Number(v))}
               value={amount}
               min={1}
               max={5000}
